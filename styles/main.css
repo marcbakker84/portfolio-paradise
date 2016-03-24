@@ -1,0 +1,174 @@
+/*fonts*/
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+::selection {
+  background: #E91E63; 
+}
+::-moz-selection {
+  background: #E91E63;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 3.5em;
+    line-height: 1.2em;
+    color: rgba(255,255,255,0.95);
+    -webkit-font-smoothing: antialiased;
+}
+
+.imp {
+    font-weight: 700;
+    color: rgba(255,255,255,1);
+}
+
+a {
+    font-family: 'Merriweather', serif;
+    text-decoration: none;
+    color: rgba(255,255,255,1);
+    font-size: 1.3em;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*containers*/
+.outer-container {
+    height: 98vh;
+    width: 99vw;
+    border: 20px white solid;
+    background-color: #EEEFF1;
+    position: relative;
+    -webkit-box-sizing: border-box;  
+    -moz-box-sizing: border-box;  
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.inner-container-60 {
+    width: 60%;
+    height: 100%;
+}
+
+.inner-container-40 {
+    width: 40%;
+    height: 100%;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+/*navigatie*/
+.navigation-button {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    background-color: rgba(0,0,0,1);
+    z-index: 10;
+    text-align: center;
+    cursor: pointer;
+}
+
+.fa-angle-left {
+    color: white;
+    font-size: 3em!important;
+    margin-right: 5px;
+}
+
+.navigation-container {
+    height: 50px;
+    background-color: white;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    z-index: 9;
+    display: table;
+    table-layout: fixed;
+    width: 45%;
+    border-spacing: 50px 0;
+}
+
+.navigation-container a {
+    color: rgba(0,0,0,0.6);
+    display: table-cell;
+    border-collapse: separate;
+    vertical-align: middle;
+    font-family: 'Roboto', sans-serif;
+    -webkit-transition: all 150ms ease-out;
+    -moz-transition: all 150ms ease-out;
+    -o-transition: all 150ms ease-out;
+    transition: all 150ms ease-out;
+}
+
+.navigation-container a:hover {
+    color:rgba(0,0,0,1);
+}
+/* page navigation*/
+.page-navigation {
+    width: 25px;
+    position: fixed;
+    right: 10px;
+    top: 25vh;
+    z-index: 10;
+    top: 50%;
+    right: -11px;
+    transform: translate(-50%, -50%);
+}
+
+.marker {
+    width: 6px;
+    height: 50px;
+    background-color: #CFD8DC;
+    margin: 15px 10px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.marker.active {
+    background-color: #37474F;
+}
+
+/*driehoeken*/
+.triangle-wrapper {
+    float: left;
+    height: 100%;
+    width: 45%;
+}
+
+.triangle {
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background: linear-gradient(to right top, #795547 50%, rgba(255,255,255,0) 50%)
+}
+
+/*colors*/
+.brown {
+    background-color: #795547;
+}
+
+/*positioning*/
+.vert-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*elements*/
+
+.text-box {
+    padding: 2%;
+    margin: 3% 3% 3% 7%;
+}
+
+.text-box h1:first-child {
+    margin-top: 0px;
+}
