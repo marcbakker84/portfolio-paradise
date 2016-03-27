@@ -21,17 +21,19 @@ $(document).ready(function() {
 //        intensity: 1,   
 //    });
     
-//    var calculateWidth = function(){
-//        var x = $("#about .inner-container-60").width();
-//        var y = $(".triangle-wrapper").width();
-//        var z = $(window).width()
-//        $("#contact .inner-container-60").width(x-y);
-//        $("#contact .inner-container-40").width($(window).width()-(x-y));
-//        $("#contact .triangle-wrapper").width(y);
-//    }
+    var calculateWidth = function(){
+        console.log("resize")
+        var x = $("#about .inner-container-60").width();
+        var y = $(".triangle-wrapper").width();
+        var z = $(window).width()
+        $("#contact .inner-container-60").width(x-y-30);
+        $("#contact .inner-container-40").width($(window).width()-(x-y)-30);
+        $("#contact .triangle-wrapper").width(y);
+    }
 //    
-//    calculateWidth
-//    $(window).resize(calculateWidth)
+    calculateWidth();
+    
+    $(window).resize(calculateWidth);
     
     var x = $("#about .inner-container-60").width();
     var y = $(".triangle-wrapper").width();

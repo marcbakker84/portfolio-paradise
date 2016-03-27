@@ -170,6 +170,14 @@ body {
     background: linear-gradient(to right bottom, #00BCD4 50%, rgba(255,255,255,0) 50%)
 }
 
+.triangle-down-grey {
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background: linear-gradient(to right bottom, #EEEFF1 50%, rgba(255,255,255,0) 50%)
+}
+
 /*colors*/
 .brown {
     background-color: #795547;
@@ -177,6 +185,10 @@ body {
 
 .cyan {
     background-color: #00BCD4;
+}
+
+.grey {
+    background-color: #EEEFF1;
 }
 
 /*positioning*/
@@ -274,4 +286,25 @@ h2.client {
     font-weight: 100;
     -webkit-font-smoothing: antialiased;
     cursor: pointer;
+}
+
+/*contact section*/
+#contact {
+    background-color: blue;
+}
+
+#contact .inner-container {
+    
+}
+
+#contact a {
+    font-size: 2em;
+    line-height: 1.5em;
+    color: #546E7A;
+}
+
+#contact h1 {
+    font-size: 3em;
+    line-height: 1.5em;
+    color: #546E7A;
 }
