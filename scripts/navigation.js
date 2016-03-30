@@ -1,17 +1,11 @@
 $(document).ready(function() {
-    
+
     $('#fullpage').fullpage({
         scrollingSpeed: 1000,
         navigation: true,
         slidesNavigation: true,
         continuousHorizontal: true,
         controlArrows: false,
-    });
-    
-    $('.inner-container-case').backgroundBlur({
-        imageURL : '/assets/images/bg.jpg',
-        blurAmount : 50,
-        imageClass : 'case-background'
     });
     
 //    $('.inner-container-case').BlackAndWhite({
@@ -22,7 +16,6 @@ $(document).ready(function() {
 //    });
     
     var calculateWidth = function(){
-        console.log("resize")
         var x = $("#about .inner-container-60").width();
         var y = $(".triangle-wrapper").width();
         var z = $(window).width()
@@ -30,17 +23,10 @@ $(document).ready(function() {
         $("#contact .inner-container-40").width($(window).width()-(x-y)-30);
         $("#contact .triangle-wrapper").width(y);
     }
-//    
+    
     calculateWidth();
     
     $(window).resize(calculateWidth);
-    
-    var x = $("#about .inner-container-60").width();
-    var y = $(".triangle-wrapper").width();
-    var z = $(window).width()
-    $("#contact .inner-container-60").width(x-y-30);
-    $("#contact .inner-container-40").width($(window).width()-(x-y)-30);
-    $("#contact .triangle-wrapper").width(y);
     
     var closed = true 
     
@@ -60,9 +46,8 @@ $(document).ready(function() {
                 duration: 250,
             }); 
             
-            $(".navigation-container").css(
-                "display","table"
-            );
+            $(".navigation-container").toggle("slide", {direction:'right'});
+            $(".navigation-container").css("display","table");
             
             closed = false;
             
@@ -80,9 +65,8 @@ $(document).ready(function() {
                 duration: 250,
             });
             
-            $(".navigation-container").css(
-                "display","none"
-            );
+            $(".navigation-container").toggle("slide", {direction:'right'});
+
             
             closed = true;
             
