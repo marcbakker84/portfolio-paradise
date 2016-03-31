@@ -1,12 +1,24 @@
 $(document).ready(function() {
 
+    
     $('#fullpage').fullpage({
+        //anchors:['home1','work1','about1','contact1'],
+        animateAnchor:true,
         scrollingSpeed: 1000,
         navigation: true,
         slidesNavigation: true,
-        continuousHorizontal: true,
+        continuousHorizontal: false,
         controlArrows: false,
+        loopBottom: true,
+        afterRender: function () {
+        autoSlider = setInterval(function () {
+            $.fn.fullpage.moveSlideRight();
+        }, 3000);
+        }
+        
     });
+    
+
     
 //    $('.inner-container-case').BlackAndWhite({
 //        hoverEffect: false,
@@ -32,44 +44,33 @@ $(document).ready(function() {
     
     $(".navigation-button").click(function(){
         if(closed == true ){
-            
             $(".navigation-button").animate({
                 backgroundColor: "#ffffff",
             });
-            
             $(".fa-angle-left").animate({
                 color: "#000000",
             })
-             
             $('.fa-angle-left').transition({ 
                 rotate: '180deg',
                 duration: 250,
             }); 
-            
             $(".navigation-container").toggle("slide", {direction:'right'});
             $(".navigation-container").css("display","table");
-            
             closed = false;
             
         } else {
             $(".navigation-button").animate({
                 backgroundColor: "#000000",
             });
-            
             $(".fa-angle-left").animate({
                 color: "#ffffff",
             });
-            
             $('.fa-angle-left').transition({ 
                 rotate: '0deg',
                 duration: 250,
             });
-            
             $(".navigation-container").toggle("slide", {direction:'right'});
-
-            
             closed = true;
-            
         }
     });
         

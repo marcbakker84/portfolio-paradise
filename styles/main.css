@@ -11,6 +11,10 @@
   background: #E91E63;
 }
 
+.no_transition {
+    transition: none !important;
+}
+
 /*css reset*/
 * { 
     padding: 0; margin: 0; 
@@ -78,11 +82,8 @@ body {
 }
 
 .outer-container {
-    /*height: 100vh;
-    width: 100vw;*/
     margin-left: -0vw;
-    /*border: 30px white solid;*/
-    background-color: #EEEFF1;
+    /*background-color: #EEEFF1;*/
     position: relative;
     -webkit-box-sizing: border-box;  
     -moz-box-sizing: border-box;  
@@ -98,6 +99,22 @@ body {
 .inner-container-40 {
     width: 40%;
     height: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+.inner-container-60 {
+    width: 80%;
+    height: 100%;
+}
+
+.inner-container-40 {
+    width: 20%;
+    height: 100%;
+}
+    
+.case-box {
+    width: 75%;
+}
 }
 
 .left {
@@ -226,13 +243,21 @@ body {
     background-position: center center;   
 }
 
+.case-overlay {
+    background: -moz-linear-gradient(-45deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.95) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.95) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.95) 100%);
+    position: relative;
+    height: 100%;
+}
+
 .case-box {
     width: 50%;
     height: 50%;
     border: 10px solid rgba(255,255,255,1);
     margin: 0 auto;
     background-image: url(/assets/images/bg.jpg);
-    background-size: 105%;
+    background-size: cover;
     background-position: center center;
     position: relative;
 }
@@ -313,6 +338,8 @@ body {
     position: absolute;  
 }
 
+
+
 h3.type {
     font-family: 'Merriweather', serif;
     color: rgba(255,255,255,1);
@@ -363,12 +390,22 @@ h2.client {
 }
 
 /*contact section*/
-#contact {
-    background-color: blue;
+#home {
+    background-image:  url(/assets/images/desk.jpg);
+    background-color: #EEEFF1
 }
 
-#contact .inner-container {
-    
+#about {
+    background-image:  url(/assets/images/desk.jpg);
+    background-size: cover;
+}
+
+#about h1 {
+    font-size: 2.8em;
+}
+
+#contact {
+    background-image: url('/assets/images/bg2.jpg');
 }
 
 #contact a {

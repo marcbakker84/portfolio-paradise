@@ -11,7 +11,7 @@ var projects = [
 {
     title: 'Bloc',
     type: 'Redesign frontend',
-    image: 'assets/images/bg.jpg',
+    image: 'assets/images/bg2.jpg',
     link: 'http://www.bloc.io',
     text: 'Lorem ipsum dolor sit amet consectitor bla balalb bal bal'
 },
@@ -19,7 +19,7 @@ var projects = [
 {
     title: 'BBC',
     type: 'App design',
-    image: 'assets/images/bg.jpg',
+    image: 'assets/images/bg3.jpg',
     link: 'http://www.bbc.com',
     text: 'Lorem ipsum dolor sit amet consectitor bla balalb bal bal'
 },

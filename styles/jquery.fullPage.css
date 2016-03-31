@@ -179,12 +179,12 @@ html.fp-enabled,
     display: inline-block;
     width: 50px;
     height: 6px;
-    margin: 0 15px;
+    margin: 0 10px;
     position:relative;
 }
 
 .fp-slidesNav ul li:first-child {
-    margin: 0;
+    margin-left: 0;
 }
 
 .fp-slidesNav ul li a span {
